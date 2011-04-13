@@ -6,15 +6,7 @@
 	<script type="text/javascript" src="date.js"></script> 
 	<script type="text/javascript"> 
    SimileAjax.History.enabled = false; 
-/*
-       set start_date
-       build out terms
-       increment start_date by one year
-       build out terms for that year
-       increment start_date by two years
-       build out terms for that year
-     */
-  
+   
 function build_terms(date)
 {
     var year = date.toString("yyyy");
@@ -91,10 +83,6 @@ function build_terms(date)
 
     var the_following_year = build_terms(start_date.next().year());
     terms.events = terms.events.concat(the_following_year.events);
-//  console.log(start_date.next().year());
- // console.log(start_date.next().year());
-  //console.log(start_date.next().year());
-  
   
 /* <![CDATA[ */
 tl_js = {
@@ -133,20 +121,6 @@ tl_js = {
  
 		tl_js.w_timeline = Timeline.create(tl_js.e_timeline, bis);
 	},
-/* 
-	raw_events : [
-               {'start': '2011-05-18',
-                 'title': 'Term Switch',
-                 'description': 'Fall 2011 created'
-               },
-
-
-               {'start': '2011-01-18',
-                 'end': '2011-05-18',
-                 'title': 'Spring 2011',
-                 'description': 'Approximation of 2001101'
-               }
-	],*/
  
 	load_events : function() {
 		tl_js.tl_events.loadJSON({
@@ -172,7 +146,14 @@ tl_js = {
 <h1> 
   Term Lifecycle
 </h1> 
-<div id="id_timeline"> 
+  <p>This is a rough timeline that should act as a visual aid in determining when Blackboard course spaces are created and deleted at UVM.</p>
+  <p><strong>All dates are subject to change.</strong>  This should be considered a rough draft, and used only as a general guide.</p>
+  <p>Here are a few related resources:</p>
+  <ul>
+    <li><a href="http://www.uvm.edu/~rgweb/?Page=importantdates/i_academiccalendars.html&SM=i_menu.html">Important dates</a> (UVM Office of the Registrar)</li>
+    <li><a href="http://www.uvm.edu/registrar/?Page=registration/r_registrationmain.html&SM=r_menu.html">Registration and Verification</a></li>
+  </ul>
+  <div id="id_timeline"> 
 </div> 
 </body> 
 </html>
